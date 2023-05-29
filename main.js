@@ -47,3 +47,17 @@ function Dog(name) {
     }
   
   };
+
+  //
+  function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+
+let duck=Object.create(Animal.prototype); 
+let beagle3=Object.create(Animal.prototype);; 

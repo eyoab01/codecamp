@@ -60,4 +60,22 @@ Animal.prototype = {
 
 
 let duck=Object.create(Animal.prototype); 
-let beagle3=Object.create(Animal.prototype);; 
+let beagle3=Object.create(Animal.prototype);
+
+//Inheritance
+
+function Animal() { }
+
+Animal.prototype = {
+  constructor: Animal,
+  eat: function() {
+    console.log("nom nom nom");
+  }
+};
+
+function Dog() { }
+
+// Only change code below this line
+
+
+Dog.prototype = Object.create(Animal.prototype);

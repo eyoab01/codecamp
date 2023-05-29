@@ -95,3 +95,25 @@ Dog.prototype.constructor = Dog;
 
 let ducky = new Bird();
 let beagley = new Dog();
+
+
+
+
+function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
+function Dog() {
+
+    console.log("Woof!")
+
+}
+ 
+Dog.prototype = Object.create(Animal.prototype)
+Dog.prototype.constructor = Dog;
+Dog.prototype.bark= function(){
+  console.log("Woof!")
+};
+
+// Only change code above this line
+
+let beaglew = new Dog();

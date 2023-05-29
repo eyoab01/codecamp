@@ -78,3 +78,20 @@ function Dog() { }
 
 
 Dog.prototype = Object.create(Animal.prototype);
+
+// constructors
+
+function Animal() { }
+function Birdy() { }
+function Dogy() { }
+
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
+
+
+
+Bird.prototype.constructor = Bird;
+Dog.prototype.constructor = Dog;
+
+let ducky = new Bird();
+let beagley = new Dog();
